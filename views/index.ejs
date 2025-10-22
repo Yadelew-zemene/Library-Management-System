@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library management system</title>
+</head>
+<body>
+    <header>
+        <h1>Library Manegement System</h1>
+    </header>
+    <section>
+        <h2>Avaliable Books</h2>
+        <table style="border: 1px;">
+            <tr>
+                <th>BookName</th>
+                <th>BookAuthor</th>
+                <th>BookPrice</th>
+                <th>BookPage</th>
+                <th>BookState</th>
+            </tr>
+        <%data.forEach((book)=>{%>
+            <tr>
+                <td><%=book.bookName%></td>
+                <td><%=book.bookAuthor%></td>
+                <td><%=book.bookPrice%></td>
+                <td><%=book.bookPage%></td>
+                <td><%=book.bookState%></td>
+            </tr>
+
+       <% })%>
+    </table>
+
+
+    </section>
+    
+
+    
+</body>
+</html>
