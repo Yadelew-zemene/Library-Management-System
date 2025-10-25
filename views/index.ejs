@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library management system</title>
+    <style>
+        table{
+            border:solid;
+        }
+        body{
+            background-color: bisque;
+        }
+    </style>
 </head>
+
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#"> About Us</a></li>
+                <li><a href="#"> contact</a></li>
+            </ul>
+        </nav>
         <h1>Library Manegement System</h1>
     </header>
     <section>
@@ -26,14 +42,74 @@
                 <td><%=book.bookPrice%></td>
                 <td><%=book.bookPage%></td>
                 <td><%=book.bookState%></td>
-            </tr>
-
+                
        <% })%>
+
+
     </table>
+    
+    
+    <!-- Add new book -->
+     
+     <h2>Add new book</h2>
+
+   <form action="/" method="post" >
+    <input type="text" placeholder="bookName" name="bookName" required>
+    <input type="text" placeholder="bookAuthor" name="bookAuthor" required>
+    <input type="text" placeholder="bookPage" name="bookPage" required>
+    <input type="text" placeholder="BookPrice" name="bookPrice">
+    <input type="submit" value="submit">
+
+   </form>
+   <!-- issuing books -->
+<form action="/issue" method="post">
+    <input type="text" name="bookName" id="" placeholder="Enter Book Name" required>
+    <button type="submit" value="bookName">Issue</button>
+</form>
+<!-- returning books -->
+<form action="/return" method="post">
+    <input type="text" name="bookName" id="" placeholder="Enter Book Name" required>
+    <button type="submit" value="bookName">Return</button>
+</form>
+<!-- deleting books -->
+<form action="/delete" method="post">
+    <input type="text" name="bookName" placeholder="Enter Book Name" required>
+    <button type="submit" value="bookName">Delete</button>
+</form>
+
+
+    
+
 
 
     </section>
+<section id="discription">
+   <h3> Library Management System Description</h3>
+   <div id="p1">
+    <p>The Library Management System is a web-based application designed to manage and organize books efficiently within a
+    library. It allows librarians or users to perform key operations such as adding new books, issuing books to users,
+    returning issued books, and deleting unavailable or outdated books from the collection.</p>
+   </div>
+   <div id="p2">
+    <p>The system maintains important details for each book, including the book name, author, number of pages, price, and
+    current status (Available or Issued). It provides an easy-to-use interface that displays all books in a structured table
+    format, ensuring quick access and updates.</p>
+   </div>
+   <div id="p3">
+    <p>This system helps reduce manual work by automating record management and minimizing errors. It also improves efficiency
+    by keeping all data centralized, easy to search, and instantly accessible. Overall, the Library Management System
+    simplifies the process of handling books and enhances the management of library operations.</p>
+   </div>
     
+    
+</section>
+    
+<footer>
+    <h2>Developed By Yadelew Zemene</h2>
+    <address>
+        <p ></p>
+    </address>
+</footer>
 
     
 </body>
